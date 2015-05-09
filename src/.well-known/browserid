@@ -1,0 +1,4 @@
+{
+  "_comment": "From https://developer.mozilla.org/en-US/docs/Persona/.well-known-browserid",
+  "authority": "login.persona.org"
+}

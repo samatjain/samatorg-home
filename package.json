@@ -1,0 +1,16 @@
+{
+  "name": "samatorg-home",
+  "version": "0.0.1",
+  "private": true,
+  "dependencies": {
+    "broccoli": "*",
+    "broccoli-babel-transpiler": "*",
+    "broccoli-cli": "*",
+    "broccoli-htmlmin": "*",
+    "broccoli-jade": "^1.0.1",
+    "broccoli-merge-trees": "*",
+    "broccoli-more-css": "*",
+    "broccoli-static-compiler": "*",
+    "broccoli-uglify-js": "*"
+  }
+}

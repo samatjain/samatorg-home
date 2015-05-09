@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Samat Jain</title>
+
+		<link rel="shortcut icon" href="/favicon.ico" type="image/vnd.microsoft.icon" />
+		<link rel="shortcut icon" href="/favicon.png" type="image/png" />
+		<link rel='icon' href="/pavatar.256.jpg" sizes="256x256" type="image/jpeg" />
+		<link rel="openid.server" href="http://pip.verisignlabs.com/server" />
+		<link rel="openid.delegate" href="http://tamasrepus.pip.verisignlabs.com/" />
+		<link rel="openid2.provider" href="http://pip.verisignlabs.com/server" />
+		<link rel="openid2.local_id" href="http://tamasrepus.pip.verisignlabs.com/" />
+		<meta http-equiv="X-XRDS-Location" content="http://pip.verisignlabs.com/user/tamasrepus/yadisxrds" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<link rel="pgpkey" type="application/pgp-keys" title="Samat Jain's GnuPG key" href="http://wiki.samat.org/CryptoKeys?action=AttachFile&do=view&target=0x4A456FBA.asc" />
+
+		<style>
+			body {
+				letter-spacing: -0.02em;
+			}
+			h1 {
+				font-weight: 100;
+				font-size: 2.5em;
+			}
+		</style>
+	</head>
+<body>
+	<h1>samat.org</h1>
+	<p>Much like everything else on the Web, this landing page is under construction. My blog is now at <a href="http://blog.samat.org/">blog.samat.org</a>, and wiki at <a href="http://wiki.samat.org/">wiki.samat.org</a>.</p>
+	<p>Looking for <a href="/contact.html">how to contact me</a> or my <a href="http://wiki.samat.org/CryptoKeys">public crypto keys</a>?</p>
+</body>
+</html>

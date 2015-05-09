@@ -1,0 +1,157 @@
+doctype html 
+html
+	head
+		meta(charset='utf-8')
+		title Samat K Jain
+		
+		link(rel='shortcut icon', href='/favicon.ico', type='image/vnd.microsoft.icon')
+		link(rel='shortcut icon', href='/favicon.png', type='image/png')
+		link(rel='icon', href='/pavatar.256.jpg', sizes='256x256', type='image/jpeg')
+		
+		link(rel='openid.server', href='http://pip.verisignlabs.com/server')
+		link(rel='openid.delegate', href='http://tamasrepus.pip.verisignlabs.com/')
+		link(rel='openid2.server', href='http://pip.verisignlabs.com/server')
+		link(rel='openid2.delegate', href='http://tamasrepus.pip.verisignlabs.com/')
+		meta(http-equiv='X-XRDS-Location', content='http://pip.verisignlabs.com/user/tamasrepus/yadisxrds')
+		
+		meta(name='viewport', content='width=device-width, initial-scale=1.0')
+		
+		link(rel='pgpkey', type='application/pgp-keys' title="Samat Jain's GnuPG key", href='http://wiki.samat.org/CryptoKeys?action=AttachFile&do=view&target=0x4A456FBA.asc')
+		
+		style.
+			body {
+				margin: 0
+				letter-spacing: -0.5em;
+				color: black;
+				background-color: black;
+				box-sizing: content-box;
+				background-image: url('bg.forest.jpeg');
+				background-position: center;
+				background-size: cover;
+				overflow: auto;
+				font-family: sans;
+			}
+
+			section.container {
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				height: 100vh;
+				width: 100vw;
+				box-sizing: content-box;
+			}
+
+			section.box.top {
+				align-self: flex-start;
+			}
+
+			section.box.bottom {
+				align-self: flex-end;
+			}
+
+			section.box {
+				box-sizing: content-box;
+				flex: 0 0 auto;
+				background-color: rgba(255,255,255,0.8);
+				border-radius: 1ex;
+				padding: 1em;
+				text-align: center;
+				max-width: 20em;
+			}
+
+			h1, img {
+				animation: unblur 1s ease-in-out 0s normal;
+			}
+
+			h1 {
+				animation: unblur 1s ease-in-out 0s both;
+				font-size: 3em;
+				font-weight: 200;
+				font-variant: small-caps;
+				margin: 1ex;
+			}
+
+			section img {
+				border-radius: 100%;
+				box-shadow: 0px 1px 2px rgba(0,0,0,0.4);
+				border: 4px solid white;
+			}
+
+			section p {
+				//animation: fadein 0.6s ease-in-out 0.5s 1 running;
+				animation: fadein 0.5s ease-in-out 0.8s 1 both;
+			}			
+
+			section p.two {
+				animation-delay: 1s;
+			}
+			
+			section p.three {
+				animation-delay: 1.2s;
+			}
+
+			@keyframes letterspacing {
+				0%{ letter-spacing: 1ex; }
+				100%{ letter-spacing: 0ex; }
+			}
+
+			@keyframes unblur {
+				0%,50%{
+					opacity:0;
+					-moz-filter:blur(30px);
+					-ms-filter:blur(30px);
+					-o-filter:blur(30px);
+					-webkit-filter:blur(30px);
+					filter:blur(30px)
+				}
+
+				100%{
+					opacity:1;
+					-moz-filter:blur(0);
+					-ms-filter:blur(0);
+					-o-filter:blur(0);
+					-webkit-filter:blur(0);
+					filter:blur(0)
+				}
+			}
+			
+			@-webkit-keyframes unblur {
+				0%,50%{
+					opacity:0;
+					-webkit-filter:blur(30px);
+				}
+
+				100%{
+					opacity:1;
+					-webkit-filter:blur(0);
+				}
+			}
+
+			@keyframes fadein{
+				0% { opacity: 0; transform: translateY(-20px); }
+				100% { opacity: 1; transform: translateY(0); }
+			}
+			
+			@-webkit-keyframes fadein{
+				0% { opacity: 0; transform: translateY(-20px); }
+				100% { opacity: 1; transform: translateY(0); }
+			}
+	body
+		section(class='container')
+			section(class='box')
+				img(src="hat.jpg")
+				h1 Samat K Jain
+				p dude on the Web.
+				p much like everything on the Web, this landing page is under construction.
+				p(class="two")
+					a(href="http://blog.samat.org") blog
+					|  • 
+					a(href="http://wiki.samat.org/") wiki
+					|  • 
+					a(href="http://ublog.samat.org/") µblog
+					|  • 
+					a(href="https://twitter.com/samatjain") twitter
+					|  • 
+					a(href="https://github.com/samatjain") github
+					
+				p(class="three") want to <a href="http://samat.org/contact/">contact me?</a>
