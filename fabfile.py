@@ -15,5 +15,5 @@ def deploy():
             local_dir= base_dir + '/output/',
             remote_dir=remote_path,
             exclude=['.git', '.gitignore', 'fabfile.py*', 'update.sh'],
-            #delete=True
+            delete=True
             )
