@@ -4,12 +4,14 @@ var htmlmin = require('broccoli-htmlmin');
 var uglifyjs = require('broccoli-uglify-js')
 var pickFiles = require('broccoli-static-compiler');
 var jade = require('broccoli-jade');
+var stylus = require('broccoli-stylus');
+var nib = require('nib');
 
 tree = 'src';
 
-tree = jade(tree);
+html = jade(tree);
+html = htmlmin(html);
 
-html = htmlmin(tree);
+css = stylus(tree, { use: [nib]});
 
-
-module.exports = mergeTrees([html], { overwrite: true });
+module.exports = mergeTrees([html, css], { overwrite: true });

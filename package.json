@@ -11,6 +11,8 @@
     "broccoli-merge-trees": "*",
     "broccoli-more-css": "*",
     "broccoli-static-compiler": "*",
-    "broccoli-uglify-js": "*"
+    "broccoli-stylus": "*",
+    "broccoli-uglify-js": "*",
+    "nib": "^1.1.0"
   }
 }
