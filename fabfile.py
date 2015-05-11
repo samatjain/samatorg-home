@@ -12,9 +12,13 @@ def clean():
     local('rm -rf output tmp')
 
 @task
-def deploy():
-    local('rm -rf output')
+def build():
+    clean()
     local('node_modules/.bin/broccoli build output')
+
+@task
+def deploy():
+    build()
     remote_path = '/home/xjjk/sites/samat.org/public'
     rsync_project(
             local_dir= base_dir + '/output/',
