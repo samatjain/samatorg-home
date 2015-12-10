@@ -59,8 +59,8 @@ section img
 
 
 section p, section div
-	//animation: fadein 0.6s ease-in-out 0.5s 1 running;
-	animation: fadein 0.5s ease-in-out 0.8s 1 both;
+	//animation: fadeInFromAbove 0.6s ease-in-out 0.5s 1 running;
+	animation: fadeInFromAbove 0.5s ease-in-out 0.8s 1 both;
 
 
 section p.two
@@ -105,13 +105,13 @@ section p.six
 		opacity:1;
 		-webkit-filter:blur(0);
 
-@keyframes fadein
+@keyframes fadeInFromAbove
 	0%
 		opacity: 0; transform: translateY(-20px);
 	100%
 		opacity: 1; transform: translateY(0);
 
-@-webkit-keyframes fadein
+@-webkit-keyframes fadeInFromAbove
 	0%
 		opacity: 0; transform: translateY(-20px);
 	100%
