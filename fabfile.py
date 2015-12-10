@@ -14,7 +14,7 @@ def clean():
 @task
 def build():
     clean()
-    local('node_modules/.bin/broccoli build output')
+    local(os.path.join(base_dir, 'node_modules/.bin/broccoli build output'))
 
 @task
 def deploy():
