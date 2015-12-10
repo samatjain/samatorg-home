@@ -10,7 +10,7 @@ body
 	background-size: cover;
 	overflow: auto;
 	font-family: sans;
-	letter-spacing -0.05rem
+	letter-spacing 0.05rem
 	line-height 0.9
 
 
@@ -37,8 +37,7 @@ section.box
 	background-color: rgba(255,255,255,0.8);
 	border-radius: 1ex;
 	padding: 1em;
-	text-align: center;
-	max-width: 20em;
+	max-width: 30em;
 
 
 h1, img
@@ -50,8 +49,8 @@ h1
 	font-size: 3em;
 	font-weight: 200;
 	font-variant: small-caps;
-	margin: 1ex;
-
+	margin: 1ex 0;
+	text-align: center
 
 section img
 	border-radius: 100%;
@@ -59,15 +58,15 @@ section img
 	border: 4px solid white;
 
 
-section p
+section p, section div
 	//animation: fadein 0.6s ease-in-out 0.5s 1 running;
 	animation: fadein 0.5s ease-in-out 0.8s 1 both;
-			
+
 
 section p.two
 	animation-delay: 1s;
 
-section p.three
+section div.three
 	animation-delay: 1.2s;
 
 section p.four
@@ -75,6 +74,9 @@ section p.four
 
 section p.five
 	animation-delay: 1.6s
+
+section p.six
+	animation-delay: 1.8s
 
 
 @keyframes unblur
@@ -114,3 +116,71 @@ section p.five
 		opacity: 0; transform: translateY(-20px);
 	100%
 		opacity: 1; transform: translateY(0);
+
+// animation for rotating text
+// based on http://tympanus.net/codrops/2012/04/17/rotating-words-with-css-animations
+
+// number of span elements surrounding each word in rw-words
+number_of_words = 6
+display_time = 3s
+
+// NOTE: .rw-sentence must be a div, not a p!
+.rw-sentence
+	position: relative
+
+.rw-words
+	display: inline
+
+// default look for a word
+.rw-words-1 span
+	position: absolute
+	opacity: 0
+	overflow: hidden
+	//width: 100%
+
+.rw-words-1 span
+	animation: rotateWords (number_of_words * display_time) linear infinite 0s
+
+for i in range(2, number_of_words)
+	.rw-words span:nth-child({i})
+		animation-delay (( i - 1 ) * display_time)
+
+@keyframes rotateWords
+	0%
+		opacity: 0
+	2%
+		opacity: 0
+		transform: translateY(-1em)
+	5%
+		opacity: 1
+		transform: translateY(0px)
+	17%
+		opacity: 1
+		transform: translateY(0px)
+	20%
+		opacity: 0
+		transform: translateY(1em)
+	80%
+		opacity: 0
+	100%
+		opacity: 0
+
+@-webkit-keyframes rotateWords
+	0%
+		opacity: 0
+	2%
+		opacity: 0
+		transform: translateY(-1em)
+	5%
+		opacity: 1
+		transform: translateY(0px)
+	17%
+		opacity: 1
+		transform: translateY(0px)
+	20%
+		opacity: 0
+		transform: translateY(1em)
+	80%
+		opacity: 0
+	100%
+		opacity: 0
