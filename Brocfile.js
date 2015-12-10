@@ -13,5 +13,6 @@ html = jade(tree);
 html = htmlmin(html);
 
 css = stylus(tree, { use: [nib]});
+css = morecss(css, {radical: false});
 
 module.exports = mergeTrees([html, css], { overwrite: true });
