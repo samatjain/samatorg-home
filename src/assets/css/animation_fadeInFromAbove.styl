@@ -1,0 +1,26 @@
+//////////////////////////////////////////////////////////////////////////////
+// Fade-in animation
+//////////////////////////////////////////////////////////////////////////////
+
+animation_fadeInFromAbove(parent_element, delay, start_element)
+  // parent_element: what's the parent element of those elements we'll be fading in?
+  // delay: how long should we wait before starting
+  // start_element: which nth child should we start the fadeIn animation? Count from 1
+
+  for idx in range(start_element, 10)
+  	{parent_element} > *:nth-child({idx})
+  		//animation: fadeInFromAbove 0.6s ease-in-out 0.5s 1 running;
+  		animation: fadeInFromAbove 0.5s ease-in-out 0.8s 1 both;
+  		animation-delay: (delay + (idx - start_element) * 0.2)
+
+  @keyframes fadeInFromAbove
+  	0%
+  		opacity: 0; transform: translateY(-20px);
+  	100%
+  		opacity: 1; transform: translateY(0);
+
+  @-webkit-keyframes fadeInFromAbove
+  	0%
+  		opacity: 0; transform: translateY(-20px);
+  	100%
+  		opacity: 1; transform: translateY(0);

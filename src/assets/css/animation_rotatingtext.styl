@@ -1,0 +1,70 @@
+//////////////////////////////////////////////////////////////////////////////
+// Rotating/switching text animation
+//////////////////////////////////////////////////////////////////////////////
+
+// based on http://tympanus.net/codrops/2012/04/17/rotating-words-with-css-animations
+
+animation_rotatingtext(number_of_words, display_time)
+  // number_of_words: number of words we'll be rotating in .rw-words
+  // display_time: how long each word should be displayed
+
+  // NOTE: .rw-sentence should be a div, not a p!
+  .rw-sentence
+  	position: relative
+
+  .rw-words
+  	display: inline
+
+  // default look for a word
+  .rw-words-1 span
+  	position: absolute
+  	opacity: 0
+  	overflow: hidden
+  	//width: 100%
+
+  .rw-words-1 span
+  	animation: rotateWords (number_of_words * display_time) linear infinite 0s
+
+  for i in range(2, number_of_words)
+  	.rw-words span:nth-child({i})
+  		animation-delay (( i - 1 ) * display_time)
+
+  @keyframes rotateWords
+  	0%
+  		opacity: 0
+  	2%
+  		opacity: 0
+  		transform: translateY(-1em)
+  	5%
+  		opacity: 1
+  		transform: translateY(0px)
+  	17%
+  		opacity: 1
+  		transform: translateY(0px)
+  	20%
+  		opacity: 0
+  		transform: translateY(1em)
+  	80%
+  		opacity: 0
+  	100%
+  		opacity: 0
+
+  @-webkit-keyframes rotateWords
+  	0%
+  		opacity: 0
+  	2%
+  		opacity: 0
+  		transform: translateY(-1em)
+  	5%
+  		opacity: 1
+  		transform: translateY(0px)
+  	17%
+  		opacity: 1
+  		transform: translateY(0px)
+  	20%
+  		opacity: 0
+  		transform: translateY(1em)
+  	80%
+  		opacity: 0
+  	100%
+  		opacity: 0

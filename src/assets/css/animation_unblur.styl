@@ -1,0 +1,33 @@
+//////////////////////////////////////////////////////////////////////////////
+// Unblur animation
+//////////////////////////////////////////////////////////////////////////////
+
+animation_unblur(elements)
+	{elements}
+		animation: unblur 1s ease-in-out 0s both;
+
+	@keyframes unblur
+		0%,50%
+			opacity:0;
+			-moz-filter:blur(30px);
+			-ms-filter:blur(30px);
+			-o-filter:blur(30px);
+			-webkit-filter:blur(30px);
+			filter:blur(30px)
+
+		100%
+			opacity:1;
+			-moz-filter:blur(0);
+			-ms-filter:blur(0);
+			-o-filter:blur(0);
+			-webkit-filter:blur(0);
+			filter:blur(0)
+
+	@-webkit-keyframes unblur
+		0%,50%
+			opacity:0;
+			-webkit-filter:blur(30px);
+
+		100%
+			opacity:1;
+			-webkit-filter:blur(0);
