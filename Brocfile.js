@@ -1,18 +1,17 @@
-var mergeTrees = require('broccoli-merge-trees');
-var morecss = require('broccoli-more-css');
-var htmlmin = require('broccoli-htmlmin');
-var uglifyjs = require('broccoli-uglify-js')
-var pickFiles = require('broccoli-static-compiler');
-var jade = require('broccoli-jade');
-var stylus = require('broccoli-stylus');
-var nib = require('nib');
+'use strict';
+let MergeTrees = require('broccoli-merge-trees');
+//var morecss = require('broccoli-more-css');
+let HtmlMin = require('broccoli-htmlmin');
+var Jade = require('broccoli-jade');
+var Stylus = require('broccoli-stylus');
+var Nib = require('nib');
 
-tree = 'src';
+let tree = 'src';
 
-html = jade(tree);
-html = htmlmin(html);
+let html = Jade(tree);
+html = HtmlMin(html);
 
-css = stylus(tree, { use: [nib]});
-css = morecss(css, {radical: false});
+let css = Stylus(tree, { use: [Nib]});
+//css = morecss(css, {radical: false});
 
-module.exports = mergeTrees([html, css], { overwrite: true });
+module.exports = MergeTrees([html, css], { overwrite: true });
